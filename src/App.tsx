@@ -1,15 +1,37 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
 
-import img from "./img/the-one.gif"; 
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import TheOne from "./TheOne/TheOne";
+import Home from "./Home/Home"
 
 function App() {
+
   return (
-    <div className="image_holder">
-      <img src={img} alt="Smiley face"></img>
-    </div>
+    
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <Route path="/home">
+          <Home></Home>
+        </Route>
+        <Route path="/gif">
+          <TheOne></TheOne>
+        </Route>
+      </Switch>
+    </Router>
   );
+
+
 }
 
 export default App;
