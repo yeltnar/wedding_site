@@ -1,0 +1,26 @@
+.coming_soon_outer{
+    padding: 0rem;
+    margin: 0rem; 
+
+    font-style: italic;
+    font-size: 3rem;
+
+    padding: 0rem;
+    margin: 0rem;
+
+    color:white;
+    background-color:black;
+    height:100vh;
+    width:100vw;
+}
+
+.coming_soon_outer_content{
+    --padding: 1rem;
+    padding: var(--padding);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    height:calc(100% - calc(var(--padding)*2));
+    width:calc(100% - calc(var(--padding)*2));
+}
