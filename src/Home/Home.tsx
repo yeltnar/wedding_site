@@ -1,15 +1,23 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
 
-
 import "./Home.css"
+import leaves from "../img/leaves and shit.png"
+import img from "../img/the-one.gif"; 
 
 function Home(props:any){
 
     return (
         <div className="home_outer" onClick={onClick}>
-            <div className="home_outer_content">
-                <div >Coming Soon</div>
+            <div className={"home_outer_flex"}>
+                <div className="home_outer_content">
+                    <img src={leaves} id="leaves1"></img>
+                    <div className="centerContent">
+                        <div className="coming_soon">Coming Soon</div>
+                        <img src={img} alt="nice"></img>
+                    </div>
+                    <img src={leaves} id="leaves2"></img>
+                </div>
             </div>
         </div>
     );
