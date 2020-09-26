@@ -51,12 +51,14 @@
 
 #leaves1{
     width:45rem;
+    max-width:100%;
     position: absolute;
     right:0px;
     top:0px;
 }
 #leaves2{
     width:45rem;
+    max-width:100%;
     position: absolute;
     transform: rotate(180deg);
     left:0px;
