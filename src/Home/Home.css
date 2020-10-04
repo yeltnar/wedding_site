@@ -52,7 +52,7 @@
 }
 
 .centerContent > img {
-    max-width: 40%;
+    max-width: min(100vw, 35rem);
 }
 
 #leaves1{
