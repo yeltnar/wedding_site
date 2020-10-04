@@ -41,12 +41,18 @@
     align-items: center;
 }
 
-.coming_soon{
+@font-face {
+    font-family: TheWantersDEMO;
+    src: url(/TheWantersDEMO.ttf);
+  }
+.img_txt{
     font-size: 3rem;
+    margin:2rem;
+    font-family: TheWantersDEMO;
 }
 
 .centerContent > img {
-    max-width: 25rem;
+    max-width: 35rem;
 }
 
 #leaves1{

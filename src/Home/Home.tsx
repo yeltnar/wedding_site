@@ -13,7 +13,7 @@ function Home(props:any){
                 <div className="home_outer_content">
                     <img src={leaves} id="leaves1"></img>
                     <div className="centerContent">
-                        <div className="coming_soon">Coming Soon</div>
+                        <div className="img_txt">November 20, 2021</div>
                         <img src={img} alt="nice"></img>
                     </div>
                     <img src={leaves} id="leaves2"></img>
