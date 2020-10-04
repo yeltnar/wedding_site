@@ -42,13 +42,14 @@
 }
 
 @font-face {
-    font-family: TheWantersDEMO;
-    src: url(/TheWantersDEMO.ttf);
+    font-family: zefont;
+    src: url(/BrodoThinGrunge.ttf);
   }
 .img_txt{
     font-size: 3rem;
     margin:2rem;
-    font-family: TheWantersDEMO;
+    font-family: zefont;
+    font-weight: bold;
 }
 
 .centerContent > img {
