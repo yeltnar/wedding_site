@@ -52,7 +52,7 @@
     font-weight: bold;
 }
 
-.centerContent > img {
+.home_outer  .centerContent > img {
     max-width: min(100vw, 35rem);
 }
 

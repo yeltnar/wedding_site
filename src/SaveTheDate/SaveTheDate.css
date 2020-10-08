@@ -12,6 +12,10 @@
     justify-content: center;
 }
 
+.centerContent > img {
+    max-width: min(100%, 35rem);
+}
+
 .img_txt{
     display: flex;
     align-items: center;
