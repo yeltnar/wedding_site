@@ -1,0 +1,12 @@
+.centerContent{
+    margin: 5rem;
+    background-color: black;
+    color:white;
+
+    width: calc(100vw - 10rem);
+    height: calc(100vh - 10rem);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -11,6 +11,7 @@ import {
 
 import TheOne from "./TheOne/TheOne";
 import Home from "./Home/Home"
+import SaveTheDate from "./SaveTheDate/SaveTheDate"
 
 function App() {
 
@@ -23,6 +24,12 @@ function App() {
         </Route>
         <Route path="/home">
           <Home></Home>
+        </Route>
+        <Route path="/save">
+          <SaveTheDate></SaveTheDate>
+        </Route>
+        <Route path="/savethedate">
+          <SaveTheDate></SaveTheDate>
         </Route>
         <Route path="/gif">
           <TheOne></TheOne>
