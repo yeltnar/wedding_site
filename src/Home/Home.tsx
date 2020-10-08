@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from "react-router-dom";
 
 import "./Home.css"
 import leaves from "../img/leaves and shit.png"
@@ -23,8 +22,8 @@ function Home(props:any){
     );
 
     function onClick(){
-        props.history.push("/gif");
+        // props.history.push("/gif");
     }
 }
 
-export default withRouter(Home);
+export default Home;

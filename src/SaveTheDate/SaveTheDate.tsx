@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from "react-router-dom";
 
 import "./SaveTheDate.css"
 import leaves from "../img/leaves and shit.png"
@@ -19,7 +18,7 @@ function SaveTheDate(props:any){
     );
 
     return (
-        <div className="save_the_date_outer" onClick={onClick}>
+        <div className="save_the_date_outer">
             <div className={"save_the_date_outer_flex"}>
                 <div className="save_the_date_outer_content">
                     {/* 
@@ -32,10 +31,6 @@ function SaveTheDate(props:any){
             </div>
         </div>
     );
-
-    function onClick(){
-        // props.history.push("/gif");
-    }
 }
 
-export default withRouter(SaveTheDate);
+export default SaveTheDate;
