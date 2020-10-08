@@ -11,7 +11,10 @@ function SaveTheDate(props:any){
             <img src={leaves} id="leaves1"></img>
             <img src={leaves} id="leaves2"></img>
             <div className="centerContent">
-                <div className="img_txt">November 20, 2021</div>
+                <div className="img_txt">
+                    <div className="save_the_date">~ Save the date ~</div>
+                    <div className="date">November 20, 2021</div>                    
+                </div>
                 <img src={img} alt="nice"></img>
             </div>
         </>

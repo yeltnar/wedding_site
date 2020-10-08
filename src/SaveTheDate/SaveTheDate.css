@@ -1,12 +1,28 @@
 .centerContent{
-    margin: 5rem;
+    --margin: 10rem;
+    margin: var(--margin);
     background-color: black;
     color:white;
 
-    width: calc(100vw - 10rem);
-    height: calc(100vh - 10rem);
+    width: calc(100vw - calc(2*var(--margin)));
+    height: calc(100vh - calc(2*var(--margin)));
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.img_txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
+}
+
+.img_txt > .save_the_date{
+    font-size: 2rem;
+}
+
+.img_txt > .date{
+    font-size: 5rem;
 }
