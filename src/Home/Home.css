@@ -11,7 +11,7 @@
     margin: 0rem;
 
     color:white;
-    background-color:black;
+    /* background-color:black; */
     height:100vh;
     width:100vw;
 }
@@ -39,6 +39,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: black;
+
+    /* coppied */
+    --margin: 10rem;
+    margin: var(--margin);
+    /* background-color: black; */
+    color:white;
+
+    width: calc(100vw - calc(2*var(--margin)));
+    height: calc(100vh - calc(2*var(--margin)));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @font-face {
