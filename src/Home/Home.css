@@ -11,54 +11,45 @@
     margin: 0rem;
 
     color:white;
-    /* background-color:black; */
-    height:100vh;
-    width:100vw;
-}
 
-.home_outer_flex{
     height:100vh;
     width:100vw;
-    /* max-width: 2100px; */
-    
 }
 
 .home_outer_content{
-    --padding: 1rem;
-    padding: var(--padding);
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
+}
 
-    height:calc(100% - calc(var(--padding)*2));
-    width:calc(100% - calc(var(--padding)*2));
+.centerContentGrid{
+
+    height:100%;
+    width:100%;
     
+    background-color: black;
+    color:white;
+
+    display: grid;
+
 }
 
 .centerContent{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: black;
+    display: grid;
+    grid-template: 20% 80% / 100%;
 
-    /* coppied */
-    --margin: 10rem;
-    margin: var(--margin);
-    /* background-color: black; */
-    color:white;
+    max-height: 100%;
+    max-width: 100%;
 
-    width: calc(100vw - calc(2*var(--margin)));
-    height: calc(100vh - calc(2*var(--margin)));
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-self: center;
+    align-self: center;
 }
 
-@media (min-resolution: 2.1dppx) {
-    .centerContent{
-        min-width:90%;
-    }
+.centerContentWrapper{
+    display:grid;
+    grid-template: 5vh 90vh 5vh / 5vw 90vw 5vw;
+    height:100vh;
+    width:100vw;
 }
 
 @font-face {
@@ -66,29 +57,76 @@
     src: url(/BrodoThinGrunge.ttf);
   }
 .img_txt{
-    font-size: 3rem;
-    margin:2rem;
+    font-size: 300%;
+    /* margin: 2%; */
     font-family: zefont;
     font-weight: bold;
     text-align: center;
+    text-align: center;
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.home_outer  .centerContent > img {
-    max-width: min(100vw, 35rem, 90%);
+.home_outer  .centerContent .the_one_img_wrapper{
+    height:auto;
+}
+.home_outer  .centerContent .the_one_img {
+    max-width: 85vw;
+    min-width: 40vw;
+
+    justify-self: center;
+    align-self: center;
+
+    display: grid;
+
+}
+
+.the_one_img > img{
+    max-height: 100%;
+    max-width: 100%;
+
+    justify-self: center;
+    align-self: center;
+}
+
+.leaves_img{
+    width:45rem;
+    position: absolute;
+    max-height: 100%;
+    max-width:100%;
+}
+
+/* weird mobile stuff */
+@media (min-resolution: 2.1dppx) {
+    
+    @media (orientation: landscape) {
+        .leaves_img{
+            max-width:30%;
+            max-height: 100%;
+        }
+    }
+      
+    @media (orientation: portrait) {
+        /* .leaves_img{
+            max-width:30%;
+            max-height: 100%;
+        } */
+    }
 }
 
 #leaves1{
-    width:45rem;
-    max-width:100%;
-    position: absolute;
     right:0px;
     top:0px;
 }
 #leaves2{
-    width:45rem;
-    max-width:100%;
-    position: absolute;
     transform: rotate(180deg);
     left:0px;
     bottom:0px;
+}
+
+.leaves_src{
+    max-height:100%;
+    max-width:100%;
 }

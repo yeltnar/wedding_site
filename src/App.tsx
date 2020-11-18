@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TheOne from "./TheOne/TheOne";
+// import TheOne from "./TheOne/TheOne";
 import Home from "./Home/Home"
 // import SaveTheDate from "./SaveTheDate/SaveTheDate"
 
