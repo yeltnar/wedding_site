@@ -8,16 +8,30 @@ function Home(props:any){
 
     return (
         <div className="home_outer" onClick={onClick}>
-            <div className={"home_outer_flex"}>
-                <div className="home_outer_content">
-                    <img src={leaves} id="leaves1"></img>
-                    <div className="centerContent">
-                        <div className="img_txt">November 20, 2021</div>
-                        <img src={img} alt="nice"></img>
+                    <div className="leaves_img" id="leaves1">
+                        {/* <img src={leaves} className="leaves_src"></img> */}
                     </div>
-                    <img src={leaves} id="leaves2"></img>
-                </div>
-            </div>
+                    <div className="centerContentWrapper">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div className="centerContentGrid">
+                            {/* <div className="centerContent">
+                                <div className="img_txt">November 20, 2021</div>
+                                <div className="the_one_img">
+                                    <img src={img} ></img>
+                                </div>
+                            </div> */}
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div className="leaves_img" id="leaves2">
+                        {/* <img src={leaves} className="leaves_src"></img> */}
+                    </div>
         </div>
     );
 
