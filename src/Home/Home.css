@@ -55,6 +55,12 @@
     justify-content: center;
 }
 
+@media (min-resolution: 2.1dppx) {
+    .centerContent{
+        min-width:90%;
+    }
+}
+
 @font-face {
     font-family: zefont;
     src: url(/BrodoThinGrunge.ttf);
@@ -64,10 +70,11 @@
     margin:2rem;
     font-family: zefont;
     font-weight: bold;
+    text-align: center;
 }
 
 .home_outer  .centerContent > img {
-    max-width: min(100vw, 35rem);
+    max-width: min(100vw, 35rem, 90%);
 }
 
 #leaves1{
