@@ -63,7 +63,7 @@
     font-weight: bold;
     text-align: center;
     text-align: center;
-    /* height:auto; */
+    height:auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,13 +74,13 @@
 }
 .home_outer  .centerContent .the_one_img {
     max-width: 85vw;
-    /* max-height: 20vh; */
-    /* overflow: hidden; */
+    min-width: 40vw;
 
     justify-self: center;
     align-self: center;
 
     display: grid;
+
 }
 
 .the_one_img > img{
