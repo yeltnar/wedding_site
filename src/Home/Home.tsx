@@ -19,8 +19,10 @@ function Home(props:any){
                         <div className="centerContentGrid">
                             <div className="centerContent">
                                 <div className="img_txt">November 20, 2021</div>
-                                <div className="the_one_img" style={{backgroundColor:"pink"}}>
-                                    <img src={img} ></img>
+                                <div className="the_one_img_wrapper" style={{backgroundColor:"pink"}}>
+                                    <div className="the_one_img" style={{backgroundColor:"green"}}>
+                                        <img src={img} ></img>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -69,18 +69,18 @@
     justify-content: center;
 }
 
+.home_outer  .centerContent .the_one_img_wrapper{
+    height:auto;
+}
 .home_outer  .centerContent .the_one_img {
-    max-width: 100%;
-    max-height: 80%;
-    overflow: hidden;
+    max-width: 85vw;
+    /* max-height: 20vh; */
+    /* overflow: hidden; */
 
     justify-self: center;
     align-self: center;
 
     display: grid;
-
-    width: 60vw;
-
 }
 
 .the_one_img > img{
