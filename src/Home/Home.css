@@ -22,13 +22,10 @@
     justify-content: center;
 }
 
-.centerContentGrid{
+.centerContentWrapper{
 
-    --padding: 3vh;
-    top: var(--padding);
-    height: calc(100vh - var(--padding)*2);
-    left: var(--padding);
-    width: calc(100vw - var(--padding)*2);
+    width:calc(100*var(--cvw, 1vw));
+    height:calc(100*var(--cvh, 1vh));
     
     color:white;
 
@@ -49,8 +46,8 @@
     display: flex;
     flex-direction: column;
 
-    max-height: 50vh;
-    height: calc(var(--img-container-height) + var(--txt-container-height));
+    max-height: calc(70 * var(--cvh));
+    /* height: calc(var(--img-container-height) + var(--txt-container-height)); */
     /* height:45vh; */
     max-width: 100%;
 
@@ -102,7 +99,7 @@
 .home_outer  .centerContent .the_one_img {
     justify-self: center;
     align-self: center;
-    height: min(100%, var(--img-container-height));
+    /* height: calc(60 * var(--cvh)); */
 }
 
 .the_one_img > img{
