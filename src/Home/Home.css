@@ -22,34 +22,76 @@
     justify-content: center;
 }
 
-.centerContentGrid{
+.centerContentWrapper{
 
-    height:100%;
-    width:100%;
+    width:calc(100*var(--cvw, 1vw));
+    height:calc(100*var(--cvh, 1vh));
     
-    background-color: black;
     color:white;
 
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    overflow: hidden;
+    
+    position: fixed;
+    z-index: -1;;
 }
 
-.centerContent{
-    display: grid;
-    grid-template: 20% 80% / 100%;
 
-    max-height: 100%;
+/* weird mobile stuff */
+@media (min-resolution: 2.1dppx) {
+    
+    @media (orientation: landscape) {
+        .centerContent{
+            width: 40vw !important;
+        }
+    }
+      
+    @media (orientation: portrait) {
+        .centerContent{
+            width: 70vw !important;
+        }
+    }
+}
+.centerContent{
+    --img-container-height: 40vh;
+    --txt-container-height: 5vh;
+
+    display: flex;
+    flex-direction: column;
+
+    max-height: calc(70 * var(--cvh));
+    /* height: calc(var(--img-container-height) + var(--txt-container-height)); */
+    /* height:45vh; */
     max-width: 100%;
+
+    width: 50vw;
 
     justify-self: center;
     align-self: center;
+
+    overflow: hidden;;
 }
 
-.centerContentWrapper{
-    display:grid;
-    grid-template: 5vh 90vh 5vh / 5vw 90vw 5vw;
-    height:100vh;
-    width:100vw;
+.blackBox{
+    position: fixed;
+    z-index: -2;
+    background-color: black;
+    --black-box-padding: 4vh;
+
+    width: calc(100vw - 2*var(--black-box-padding));
+    height: 50vh;
+
+    left: var(--black-box-padding);
+}
+.blackBox.top{
+    top: var(--black-box-padding);
+    /* top: 0px; */
+}
+.blackBox.bottom{
+    bottom: var(--black-box-padding);
 }
 
 @font-face {
@@ -67,24 +109,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: visible;
 }
 
-.home_outer  .centerContent .the_one_img_wrapper{
-    height:auto;
-}
 .home_outer  .centerContent .the_one_img {
-    max-width: 85vw;
-    min-width: 40vw;
-
     justify-self: center;
     align-self: center;
-
-    display: grid;
-
+    /* height: calc(60 * var(--cvh)); */
 }
 
 .the_one_img > img{
     max-height: 100%;
+    /* max-height: min(100%, 30rem); */
     max-width: 100%;
 
     justify-self: center;
@@ -93,7 +129,7 @@
 
 .leaves_img{
     width:45rem;
-    position: absolute;
+    position: fixed;
     max-height: 100%;
     max-width:100%;
 }
