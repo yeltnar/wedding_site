@@ -24,6 +24,8 @@ function Home(props: any) {
             <div className="leaves_img" id="leaves2">
                 <img src={leaves} className="leaves_src"></img>
             </div>
+            <div className="blackBox top"></div>
+            <div className="blackBox bottom"></div>
         </div>
     );
 

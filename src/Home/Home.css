@@ -33,7 +33,6 @@
     left: var(--padding);
     width: calc(100vw - var(--padding)*2);
     
-    background-color: black;
     color:white;
 
     display: flex;
@@ -64,6 +63,27 @@
     align-self: center;
 
     overflow: hidden;;
+}
+
+.blackBox{
+    position: fixed;
+    z-index: -2;
+    background-color: black;
+    --black-box-padding: 4vh;
+
+    /* width: calc(100vw - 2*var(--black-box-padding));
+    height: calc(100vh - 2*var(--black-box-padding)); */
+    width: calc(100vw - 2*var(--black-box-padding));
+    height: 50vh;
+
+    left: var(--black-box-padding);
+}
+.blackBox.top{
+    top: var(--black-box-padding);
+    /* top: 0px; */
+}
+.blackBox.bottom{
+    bottom: var(--black-box-padding);
 }
 
 @font-face {
