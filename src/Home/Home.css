@@ -24,9 +24,6 @@
 
 .centerContentGrid{
 
-    grid-column: 2;
-    grid-row: 2;
-
     --padding: 3vh;
     top: var(--padding);
     height: calc(100vh - var(--padding)*2);
@@ -71,8 +68,6 @@
     background-color: black;
     --black-box-padding: 4vh;
 
-    /* width: calc(100vw - 2*var(--black-box-padding));
-    height: calc(100vh - 2*var(--black-box-padding)); */
     width: calc(100vw - 2*var(--black-box-padding));
     height: 50vh;
 
