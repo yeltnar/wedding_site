@@ -39,6 +39,22 @@
     z-index: -1;;
 }
 
+
+/* weird mobile stuff */
+@media (min-resolution: 2.1dppx) {
+    
+    @media (orientation: landscape) {
+        .centerContent{
+            width: 40vw !important;
+        }
+    }
+      
+    @media (orientation: portrait) {
+        .centerContent{
+            width: 70vw !important;
+        }
+    }
+}
 .centerContent{
     --img-container-height: 40vh;
     --txt-container-height: 5vh;
