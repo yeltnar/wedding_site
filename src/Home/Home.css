@@ -58,17 +58,12 @@
     /* height:45vh; */
     max-width: 100%;
 
+    width: 50vw;
+
     justify-self: center;
     align-self: center;
 
     overflow: hidden;;
-}
-
-.centerContentWrapper{
-    display:grid;
-    grid-template: 5vh 90vh 5vh / 5vw 90vw 5vw;
-    height:100vh;
-    width:100vw;
 }
 
 @font-face {
@@ -86,15 +81,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: visible;
 }
 
-.home_outer  .centerContent .the_one_img_wrapper{
-    height:auto;
-}
-.home_outer  .centerContent .the_one_img_wrapper {
-    height:100%;
-
-}
 .home_outer  .centerContent .the_one_img {
     justify-self: center;
     align-self: center;
