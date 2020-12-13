@@ -1,0 +1,23 @@
+{
+    "girls":[
+        {
+            "name":"Michaela",
+            "img":"",
+            "relation":"Drew's sister"
+        }
+    ],
+    "boys":[
+        {
+            "name":"Nam",
+            "img":"/weddingparty/Nam.JPG",
+            "_img":"/logo192.png",
+            "relation":"Drew's friend from UTD"
+        },
+        {
+            "name":"Casey",
+            "img":"/weddingparty/Nam.JPG",
+            "_img":"/logo192.png",
+            "relation":"Drew's friend from UTD"
+        }
+    ]
+}

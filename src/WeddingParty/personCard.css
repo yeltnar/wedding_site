@@ -1,0 +1,8 @@
+.personCard{
+    /* background-color: pink; */
+}
+
+.personCard img{
+    max-height: min(30vh, 30vw);
+    max-width: min(30vh, 30vw);
+}

@@ -14,6 +14,8 @@
 
     height:100vh;
     width:100vw;
+
+    --black-box-padding: 4vh;
 }
 
 .home_outer_content{
@@ -30,13 +32,14 @@
     color:white;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     overflow: hidden;
     
     position: fixed;
-    z-index: -1;;
+    z-index: 3;
 }
 
 
@@ -79,7 +82,6 @@
     position: fixed;
     z-index: -2;
     background-color: black;
-    --black-box-padding: 4vh;
 
     width: calc(100vw - 2*var(--black-box-padding));
     height: 50vh;
@@ -128,7 +130,7 @@
 }
 
 .leaves_img{
-    width:45rem;
+    width:40vw;
     position: fixed;
     max-height: 100%;
     max-width:100%;
@@ -157,12 +159,25 @@
     top:0px;
 }
 #leaves2{
-    transform: rotate(180deg);
+    transform: scaleX(-1);
     left:0px;
-    bottom:0px;
+    top:0px;
 }
 
 .leaves_src{
     max-height:100%;
     max-width:100%;
+}
+
+
+/* topbar */
+#topbar{
+    position: fixed;
+    top: 24vh;
+
+    display:flex;
+}
+
+#topbar > * {
+    margin: 0rem .5rem 0rem .5rem;
 }
