@@ -1,8 +1,9 @@
 .WeddingParty{
-    display: flex;
-
     position: fixed;
-    top: 30vh;
+
+    --top: 30vh;
+    top: var(--top);
+    height: calc(100vh - var(--top) - var(--black-box-padding));
 
     flex-wrap: wrap;
     justify-content: center;
@@ -10,12 +11,18 @@
     width: calc(95vw - 2*var(--black-box-padding) );
 
     overflow-y: scroll;
+
+    /* overflow-y: scroll; */
 }
 
-.WeddingParty{
+.WeddingPartyWrapper{
     /* padding: 1rem; */
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.WeddingParty > *{
+.WeddingPartyWrapper > *{
     padding: 1rem;
 }
