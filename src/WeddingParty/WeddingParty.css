@@ -1,7 +1,7 @@
 .WeddingParty{
     position: fixed;
 
-    --top: 30vh;
+    --top: calc( 40vw * (1611/2363) * (864/1611) + 3vh );
     top: var(--top);
     height: calc(100vh - var(--top) - var(--black-box-padding));
 
@@ -11,8 +11,15 @@
     width: calc(95vw - 2*var(--black-box-padding) );
 
     overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
 
     /* overflow-y: scroll; */
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
 }
 
 .WeddingPartyWrapper{

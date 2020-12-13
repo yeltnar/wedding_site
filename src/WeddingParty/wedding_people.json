@@ -38,34 +38,34 @@
         {
             "name":"Yumna Moazzam",
             "img":"/weddingparty/white.png",
-            "relation":"Drew's friend from college"
+            "relation":"Drew's friend from UTD"
         }
     ],
     "boys":[
         {
             "name":"Nam Tran",
             "img":"/weddingparty/Nam.jpg",
-            "relation":"Drew's friend from college"
+            "relation":"Drew's friend from UTD"
         },
         {
             "name":"Casey Schneemann",
             "img":"/weddingparty/Casey.jpg",
-            "relation":"Julie's Brother"
+            "relation":"Julie's twin brother"
         },
         {
             "name":"Stephen Hales",
             "img":"/weddingparty/Stephen.jpg",
-            "relation":"Drew's friend from college"
+            "relation":"Drew's friend from UTD"
         },
         {
             "name":"Eric Gose",
             "img":"/weddingparty/white.png",
-            "relation":"Drew's friend from college"
+            "relation":"Drew's friend from UTD"
         },
         {
             "name":"Shawn Rob",
             "img":"/weddingparty/Shawn.jpg",
-            "relation":"Drew's friend from college"
+            "relation":"Drew's friend from UTD"
         },
         {
             "name":"Josh Chancellor",
@@ -75,7 +75,7 @@
         {
             "name":"Danny Zamorano",
             "img":"/weddingparty/white.png",
-            "relation":"Drew's friend from college"
+            "relation":"Drew's friend from UTD"
         }
     ]
 }

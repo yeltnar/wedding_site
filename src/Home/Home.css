@@ -102,7 +102,7 @@
 
 @font-face {
     font-family: zefont;
-    src: url(/BrodoThinGrunge.ttf);
+    src: url(/Market_Deco.ttf);
   }
 .img_txt{
     font-size: 300%;
@@ -177,7 +177,8 @@
 /* topbar */
 #topbar{
     position: fixed;
-    top: 24vh;
+    /* top: 24vh; */
+    top: calc( 40vw * (1611/2363) * (864/1611) );
 
     display:flex;
 }
