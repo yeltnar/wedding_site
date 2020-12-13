@@ -13,26 +13,26 @@ const top_bar_list = [
     name:"Home",
     page_link: "",
   },
-  {
-    name:"Our Story",
-    page_link: "story",
-  },
+  // {
+  //   name:"Our Story",
+  //   page_link: "story",
+  // },
   {
     name:"Wedding Party",
     page_link: "party",
   },
-  {
-    name:"Registry",
-    page_link: "registry",
-  },
-  {
-    name:"Accommodations",
-    page_link: "accommodations",
-  },
-  {
-    name:"COVID-19 Sux",
-    page_link: "covid",
-  }
+  // {
+  //   name:"Registry",
+  //   page_link: "registry",
+  // },
+  // {
+  //   name:"Accommodations",
+  //   page_link: "accommodations",
+  // },
+  // {
+  //   name:"COVID-19 Sux",
+  //   page_link: "covid",
+  // }
 ];
 
 function App(){
