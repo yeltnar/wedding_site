@@ -8,13 +8,21 @@ import wedding_people from './wedding_people.json';
 
 export default function WeddingParty(){
 
-    const boys_cards = wedding_people.boys.map((cur)=>{
-        return <PersonCard name={cur.name} img={cur.img} relation={cur.relation}></PersonCard>
-    });
+    const boys_cards = wedding_people.boys.reduce((acc:JSX.Element[],cur)=>{
+        const ele = <PersonCard name={cur.name} img={cur.img} relation={cur.relation}></PersonCard>
+        if( cur.hide !==true ){
+            acc.push(ele);
+        }
+        return acc
+    },[]);
 
-    const girls_cards = wedding_people.girls.map((cur)=>{
-        return <PersonCard name={cur.name} img={cur.img} relation={cur.relation}></PersonCard>
-    });
+    const girls_cards = wedding_people.girls.reduce((acc:JSX.Element[],cur)=>{
+        const ele = <PersonCard name={cur.name} img={cur.img} relation={cur.relation}></PersonCard>
+        if( cur.hide !==true ){
+            acc.push(ele);
+        }
+        return acc
+    },[]);
 
     return (
         <div className="WeddingParty">

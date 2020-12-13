@@ -3,79 +3,94 @@
         {
             "name":"Michaela Brantley",
             "img":"/weddingparty/Michaela.jpg",
-            "relation":"Drew's sister"
+            "relation":"Drew's sister",
+            "hide":false
         },
         {
             "name":"Tabitha Hales",
             "img":"/weddingparty/Tabitha.jpg",
-            "relation":"Drew and Julie's friend from college"
+            "relation":"Drew and Julie's friend from college",
+            "hide":false
         },
         {
             "name":"Holly Bailey",
             "img":"/weddingparty/Holly.jpg",
-            "relation":"Julie's soon to be sister-in-law"
+            "relation":"Julie's soon to be sister-in-law",
+            "hide":false
         },
         {
             "name":"Anna Schneemann",
             "img":"/weddingparty/white.png",
-            "relation":"Julie's cousin"
+            "relation":"Julie's cousin",
+            "hide":true
         },
         {
             "name":"Lacy Schneemann",
             "img":"/weddingparty/Lacy.jpg",
-            "relation":"Julie's cousin"
+            "relation":"Julie's cousin",
+            "hide":false
         },
         {
             "name":"Linley Freeman",
             "img":"/weddingparty/Linley.jpg",
-            "relation":"Linley"
+            "relation":"Linley",
+            "hide":false
         },
         {
             "name":"Tina Melamed",
             "img":"/weddingparty/Tina.jpg",
-            "relation":"Tina"
+            "relation":"Tina",
+            "hide":false
         },
         {
             "name":"Yumna Moazzam",
             "img":"/weddingparty/white.png",
-            "relation":"Drew's friend from UTD"
+            "relation":"Drew's friend from UTD",
+            "hide":true
         }
     ],
     "boys":[
         {
             "name":"Nam Tran",
             "img":"/weddingparty/Nam.jpg",
-            "relation":"Drew's friend from UTD"
+            "relation":"Drew's friend from UTD",
+            "hide":false
         },
         {
             "name":"Casey Schneemann",
             "img":"/weddingparty/Casey.jpg",
-            "relation":"Julie's twin brother"
+            "relation":"Julie's twin brother",
+            "hide":false
         },
         {
             "name":"Stephen Hales",
             "img":"/weddingparty/Stephen.jpg",
-            "relation":"Drew's friend from UTD"
+            "relation":"Drew's friend from UTD",
+            "hide":false
         },
         {
             "name":"Eric Gose",
             "img":"/weddingparty/white.png",
-            "relation":"Drew's friend from UTD"
+            "relation":"Drew's friend from UTD",
+            "hide":true
         },
         {
             "name":"Shawn Rob",
             "img":"/weddingparty/Shawn.jpg",
-            "relation":"Drew's friend from UTD"
+            "relation":"Drew's friend from UTD",
+            "hide":false
         },
         {
             "name":"Josh Chancellor",
             "img":"/weddingparty/white.png",
-            "relation":"Drew's cousin"
+            "relation":"Drew's cousin",
+            "hide":true
         },
         {
             "name":"Danny Zamorano",
             "img":"/weddingparty/white.png",
-            "relation":"Drew's friend from UTD"
+            "relation":"Drew's friend from UTD",
+            "hide":true
         }
     ]
 }
