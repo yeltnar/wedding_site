@@ -1,3 +1,21 @@
 .WeddingParty{
     display: flex;
+
+    position: fixed;
+    top: 30vh;
+
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: calc(95vw - 2*var(--black-box-padding) );
+
+    overflow-y: scroll;
+}
+
+.WeddingParty{
+    /* padding: 1rem; */
+}
+
+.WeddingParty > *{
+    padding: 1rem;
 }

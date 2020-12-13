@@ -84,7 +84,7 @@
     background-color: black;
 
     width: calc(100vw - 2*var(--black-box-padding));
-    height: 50vh;
+    height: calc(100vh - var(--black-box-padding));
 
     left: var(--black-box-padding);
 }
@@ -92,8 +92,12 @@
     top: var(--black-box-padding);
     /* top: 0px; */
 }
-.blackBox.bottom{
-    bottom: var(--black-box-padding);
+.whiteBox{
+    position: fixed;
+    background-color: white;
+    bottom:0rem;
+    width:100vh;
+    height: var(--black-box-padding)
 }
 
 @font-face {

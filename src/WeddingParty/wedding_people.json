@@ -2,22 +2,80 @@
     "girls":[
         {
             "name":"Michaela",
-            "img":"",
+            "img":"/weddingparty/Michaela.jpg",
             "relation":"Drew's sister"
+        },
+        {
+            "name":"Tabitha",
+            "img":"/weddingparty/Tabitha.jpg",
+            "relation":""
+        },
+        {
+            "name":"Holly",
+            "img":"/weddingparty/Holly.jpg",
+            "relation":"Holly"
+        },
+        {
+            "name":"Anna",
+            "img":"/weddingparty/Anna.jpg",
+            "relation":"Anna"
+        },
+        {
+            "name":"Lacy",
+            "img":"/weddingparty/Lacy.jpg",
+            "relation":"Lacy"
+        },
+        {
+            "name":"Linley",
+            "img":"/weddingparty/Linley.jpg",
+            "relation":"Linley"
+        },
+        {
+            "name":"Tina",
+            "img":"/weddingparty/Tina.jpg",
+            "relation":"Tina"
+        },
+        {
+            "name":"Yumna",
+            "img":"/weddingparty/Yumna.jpg",
+            "relation":"Yumna"
         }
     ],
     "boys":[
         {
             "name":"Nam",
-            "img":"/weddingparty/Nam.JPG",
-            "_img":"/logo192.png",
+            "img":"/weddingparty/Nam.jpg",
             "relation":"Drew's friend from UTD"
         },
         {
             "name":"Casey",
-            "img":"/weddingparty/Nam.JPG",
-            "_img":"/logo192.png",
-            "relation":"Drew's friend from UTD"
+            "img":"/weddingparty/Casey.jpg",
+            "relation":"Julie's Brother"
+        },
+        {
+            "name":"Stephen",
+            "img":"/weddingparty/Stephen.jpg",
+            "relation":"Stephen"
+        },
+        {
+            "name":"Eric",
+            "img":"/weddingparty/Eric.jpg",
+            "relation":"Eric"
+        },
+        {
+            "name":"Shawn",
+            "img":"/weddingparty/Shawn.jpg",
+            "relation":"Shawn"
+        },
+        {
+            "name":"Josh",
+            "img":"/weddingparty/Josh.jpg",
+            "relation":"Josh"
+        },
+        {
+            "name":"Danny",
+            "img":"/weddingparty/Danny.jpg",
+            "relation":"Danny"
         }
     ]
 }

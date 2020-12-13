@@ -26,8 +26,8 @@ const top_bar_list = [
     page_link: "registry",
   },
   {
-    name:"Accomidations",
-    page_link: "accomidations",
+    name:"Accommodations",
+    page_link: "accommodations",
   },
   {
     name:"COVID-19 Sux",
@@ -61,7 +61,7 @@ function App(){
                   <img src={leaves} className="leaves_src"></img>
               </div>
               <div className="blackBox top"></div>
-              <div className="blackBox bottom"></div>
+              <div className="whiteBox bottom"></div>
           </div>
     </div>
   );
