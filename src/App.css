@@ -17,3 +17,42 @@
   max-width: 100%;
 }
 
+
+
+/* topbar */
+#topbar{
+  position: fixed;
+  /* top: 24vh; */
+  top: calc( 40vw * (1611/2363) * (864/1611) ); /* account for height of leaves */
+  
+  /* overflow-x: scroll; */
+
+  margin: 0rem;
+  padding: 0rem;
+
+  width: calc(100vw - 2*var(--black-box-padding));
+
+  display: flex;
+  justify-content: center;
+}
+
+.topbar_wrapper {
+  display:flex;
+  justify-content: center;
+
+  --font-size: 1.5rem;
+  font-size: var(--font-size);
+  height: calc(var(--font-size));
+  overflow: visible;
+  /* display:inline-block; */
+
+}
+
+.topbar_wrapper > * {
+  margin: 0rem .5rem 0rem .5rem;
+  display:flex;
+  flex-wrap: nowrap;
+  height: calc(var(--font-size));
+  overflow: visible;
+  white-space: nowrap;
+}

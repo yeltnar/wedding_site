@@ -1,7 +1,7 @@
 .WeddingParty{
     position: fixed;
 
-    --top: calc( 40vw * (1611/2363) * (864/1611) + 3vh );
+    --top: calc( 40vw * (1611/2363) * (864/1611) + 5vh );
     top: var(--top);
     height: calc(100vh - var(--top) - var(--black-box-padding));
 

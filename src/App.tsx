@@ -6,6 +6,9 @@ import WeddingParty from "./WeddingParty/WeddingParty"
 // import CountDown from "./CountDown/CountDown"
 // import SaveTheDate from "./SaveTheDate/SaveTheDate"
 
+import "./App.css"
+import './mobilecheck.js'
+
 import leaves from "./img/leaves and shit.png"
 
 const top_bar_list = [
@@ -13,18 +16,18 @@ const top_bar_list = [
     name:"Home",
     page_link: "",
   },
-  // {
-  //   name:"Our Story",
-  //   page_link: "story",
-  // },
+  {
+    name:"Our Story",
+    page_link: "story",
+  },
   {
     name:"Wedding Party",
     page_link: "party",
   },
-  // {
-  //   name:"Registry",
-  //   page_link: "registry",
-  // },
+  {
+    name:"Registry",
+    page_link: "registry",
+  },
   // {
   //   name:"Accommodations",
   //   page_link: "accommodations",
@@ -92,7 +95,9 @@ function TopBar(){
 
   return (
     <div id="topbar">
-      {top_bar_elements}
+      <div className="topbar_wrapper">
+        {top_bar_elements}
+      </div>
     </div>
   );
 }
