@@ -3,6 +3,7 @@ import React from 'react';
 // import TheOne from "./TheOne/TheOne";
 import Home from "./Home/Home"
 import WeddingParty from "./WeddingParty/WeddingParty"
+import ComingSoon from "./ComingSoon/ComingSoon"
 // import CountDown from "./CountDown/CountDown"
 // import SaveTheDate from "./SaveTheDate/SaveTheDate"
 
@@ -46,6 +47,10 @@ function App(){
 
   if( page==="party" ){
     content = (<WeddingParty></WeddingParty>);
+  }else if( page==="story" ){
+    content = (<ComingSoon></ComingSoon>);
+  }else if( page==="registry" ){
+    content = (<ComingSoon></ComingSoon>);
   }else{
     content = (<Home></Home>);
   }

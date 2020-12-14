@@ -2,7 +2,7 @@ import React from 'react';
 
 import "./ComingSoon.css"
 
-function Home(props:any){
+function ComingSoon(props:any){
 
     return (
         <div className="coming_soon_outer" onClick={onClick}>
@@ -17,4 +17,4 @@ function Home(props:any){
     }
 }
 
-export default Home;
+export default ComingSoon;
