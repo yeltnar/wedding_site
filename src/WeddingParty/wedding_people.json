@@ -84,13 +84,13 @@
             "name":"Josh Chancellor",
             "img":"/weddingparty/white.png",
             "relation":"Drew's cousin",
-            "hide":false
+            "hide":true
         },
         {
             "name":"Danny Zamorano",
             "img":"/weddingparty/white.png",
             "relation":"Drew's friend from UTD",
-            "hide":false
+            "hide":true
         }
     ]
 }

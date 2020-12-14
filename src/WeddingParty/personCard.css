@@ -13,8 +13,10 @@
 
 .personCard .person_name{
     /* height:3rem; */
+    text-shadow: 0px 0px 2px black;
 }
 
 .personCard .person_relation{
     /* height:5rem; */
+    text-shadow: 0px 0px 2px black;
 }
