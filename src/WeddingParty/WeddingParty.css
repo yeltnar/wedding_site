@@ -27,7 +27,8 @@
     width: 100%;
     display:flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin-bottom: 4rem;
 }
 
 .WeddingPartyWrapper > *{
