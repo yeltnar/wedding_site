@@ -97,7 +97,8 @@
     background-color: white;
     bottom:0rem;
     width:100vw;
-    height: var(--black-box-padding)
+    height: var(--black-box-padding);
+    z-index:100;
 }
 
 @font-face {

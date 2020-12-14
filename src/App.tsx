@@ -37,7 +37,7 @@ const top_bar_list = [
 
 function App(){
   
-  const page = getPage();
+  const page = getCurrentPage();
 
   let content;
 
@@ -71,18 +71,23 @@ function TopBar(){
 
   const top_bar_elements = top_bar_list.map((cur, i, arr)=>{
 
+    const page = getCurrentPage();
+
     function handleClick(){
       const s = cur.page_link===""?"/":`/?p=${cur.page_link}`;
       window.location.href = s;
     }
 
-    const page = getPage();
     console.log({page});
-    if( page===cur.page_link || (page===undefined && cur.page_link==="") ){
+    if( page===cur.page_link ){
       console.log('on page '+cur.name)
     } 
 
-    return (<div onClick={handleClick} key={i}>{cur.name}</div>);
+    const inline_style = {
+      textDecoration: page===cur.page_link?"underline":""
+    };
+
+    return (<div onClick={handleClick} key={i} style={inline_style}>{cur.name}</div>);
   });
 
   return (
@@ -92,8 +97,12 @@ function TopBar(){
   );
 }
 
-function getPage(){
-  return new URLSearchParams(window.location.search).get('p');
+function getCurrentPage(){
+  let page = new URLSearchParams(window.location.search).get('p')
+  if(page===null){
+    return "home"
+  }
+  return page;
 }
 
 export default App;

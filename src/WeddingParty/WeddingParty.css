@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    width: calc(95vw - 2*var(--black-box-padding) );
+    width: calc(100vw - 2*var(--black-box-padding) );
 
     overflow-y: scroll;
     scrollbar-width: none; /* Firefox */
@@ -31,5 +31,5 @@
 }
 
 .WeddingPartyWrapper > *{
-    padding: 1rem;
+    padding: .5rem;
 }
