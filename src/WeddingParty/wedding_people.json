@@ -20,9 +20,9 @@
         },
         {
             "name":"Anna Schneemann",
-            "img":"/weddingparty/white.png",
+            "img":"/weddingparty/Anna.jpg",
             "relation":"Julie's cousin",
-            "hide":true
+            "hide":false
         },
         {
             "name":"Lacy Schneemann",
@@ -84,13 +84,13 @@
             "name":"Josh Chancellor",
             "img":"/weddingparty/white.png",
             "relation":"Drew's cousin",
-            "hide":true
+            "hide":false
         },
         {
             "name":"Danny Zamorano",
             "img":"/weddingparty/white.png",
             "relation":"Drew's friend from UTD",
-            "hide":true
+            "hide":false
         }
     ]
 }
