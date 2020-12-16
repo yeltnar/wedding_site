@@ -20,35 +20,33 @@
 
 /* topbar */
 .is_mobile #topbar{
-  background-color: black;
+  --font-size: 3rem;
+  
+  transition: height .5s;
 
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: 0;
+  overflow: hidden;
 
   width: 100vw;
   text-align: center;
 
-  font-size:3rem;
-  padding: 1rem;
+  font-size:var(--font-size);
 }
 .is_mobile.closed #topbar{
   height: 0rem;
   padding:0rem;
-  overflow: hidden;
+  overflow: hidden !important; 
 }
 .is_mobile.open #topbar{
+  /* do I need this? */
   background-color: black;
-
-  position: absolute;
-  z-index: 100;
-  top: 0;
-
-  width: 100vw;
-  text-align: center;
-
-  font-size:3rem;
+  height: calc(5 * var(--font-size));
+}
+.is_mobile .topbar_wrapper{
   padding: 1rem;
+  background-color: black;
 }
 .is_desktop #topbar{
   position: fixed;
@@ -98,7 +96,7 @@
 .is_mobile .overflow{
   height:3rem;
   z-index: 100;
-  position: absolute;
+  position: fixed;
 }
 
 .overflow > .overflow_icon{

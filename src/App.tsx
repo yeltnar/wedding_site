@@ -73,7 +73,7 @@ function App(){
                   <img src={leaves} className="leaves_src"></img>
               </div>
               <div className="centerContentWrapper">
-                <TopBar></TopBar>
+                <TopBar overflow_state={overflow_state}></TopBar>
                 {content}
               </div>
               <div className="leaves_img" id="leaves2">
@@ -104,7 +104,7 @@ function OverflowButton(props:{overflow_state:string,setOverflowState:Function})
   );
 }
 
-function TopBar(){
+function TopBar(props:{overflow_state:string}){
 
   const top_bar_elements = top_bar_list.map((cur, i, arr)=>{
 
@@ -126,9 +126,23 @@ function TopBar(){
 
     return (<div onClick={handleClick} key={i} style={inline_style}>{cur.name}</div>);
   });
+  
+  const style=(()=>{
+    let height=0;
+
+    const e = document.querySelector('.topbar_wrapper');
+
+    if( document!==undefined && e!==null && props.overflow_state!==overflow_states.closed ){
+      height = e.getBoundingClientRect().height;
+    }
+
+    return {
+      height
+    }
+  })();
 
   return (
-    <div id="topbar">
+    <div id="topbar" style={style}>
       <div className="topbar_wrapper">
         {top_bar_elements}
       </div>
