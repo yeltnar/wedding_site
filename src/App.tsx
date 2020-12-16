@@ -116,6 +116,7 @@ function TopBar(props:{overflow_state:string}){
     }
 
     console.log({page});
+    console.log({cur_page:cur.page_link});
     if( page===cur.page_link ){
       console.log('on page '+cur.name)
     } 
@@ -153,7 +154,7 @@ function TopBar(props:{overflow_state:string}){
 function getCurrentPage(){
   let page = new URLSearchParams(window.location.search).get('p')
   if(page===null){
-    return "home"
+    return ""
   }
   return page;
 }
