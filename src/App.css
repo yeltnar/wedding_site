@@ -17,8 +17,40 @@
   max-width: 100%;
 }
 
+
 /* topbar */
-#topbar{
+.is_mobile #topbar{
+  background-color: black;
+
+  position: absolute;
+  z-index: 100;
+  top: 0;
+
+  width: 100vw;
+  text-align: center;
+
+  font-size:3rem;
+  padding: 1rem;
+}
+.is_mobile.closed #topbar{
+  height: 0rem;
+  padding:0rem;
+  overflow: hidden;
+}
+.is_mobile.open #topbar{
+  background-color: black;
+
+  position: absolute;
+  z-index: 100;
+  top: 0;
+
+  width: 100vw;
+  text-align: center;
+
+  font-size:3rem;
+  padding: 1rem;
+}
+.is_desktop #topbar{
   position: fixed;
   /* top: 24vh; */
   top: calc( 40vw * (1611/2363) * (864/1611) ); /* account for height of leaves */
@@ -33,8 +65,7 @@
   display: flex;
   justify-content: center;
 }
-
-.topbar_wrapper {
+.is_desktop .topbar_wrapper {
   display:flex;
   justify-content: center;
 
@@ -45,8 +76,7 @@
   /* display:inline-block; */
 
 }
-
-.topbar_wrapper > * {
+.is_desktop .topbar_wrapper > * {
   margin: 0rem .5rem 0rem .5rem;
   display:flex;
   flex-wrap: nowrap;
@@ -54,7 +84,23 @@
   overflow: visible;
   white-space: nowrap;
 }
-
-.topbar_wrapper > *:hover{
+.is_desktop .topbar_wrapper > *:hover{
   cursor: pointer;
+}
+
+
+/* overflow icon */
+.is_desktop .overflow{
+  height:0rem;
+  display: none;
+}
+
+.is_mobile .overflow{
+  height:3rem;
+  z-index: 100;
+  position: absolute;
+}
+
+.overflow > .overflow_icon{
+  height:100%;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // import TheOne from "./TheOne/TheOne";
 import Home from "./Home/Home"
@@ -8,7 +8,7 @@ import ComingSoon from "./ComingSoon/ComingSoon"
 // import SaveTheDate from "./SaveTheDate/SaveTheDate"
 
 import "./App.css"
-import './mobilecheck.js'
+import isMobile from './mobilecheck.js'
 
 import leaves from "./img/leaves and shit.png"
 
@@ -39,7 +39,11 @@ const top_bar_list = [
   // }
 ];
 
+const overflow_states = {open:"open",closed:"closed"};
+
 function App(){
+
+  const [overflow_state,setOverflowState] = useState(overflow_states.closed);
   
   const page = getCurrentPage();
 
@@ -55,9 +59,16 @@ function App(){
     content = (<Home></Home>);
   }
 
+  const top_level_class = (()=>{
+    const overflow_open = overflow_state;
+    const is_mobile = isMobile()===true?"is_mobile":"is_desktop";
+    return `${is_mobile} ${overflow_open}`;
+  })()
+
   return (
-    <div>
+    <div className={top_level_class}>
         <div className="home_outer" onClick={()=>{}}>
+            <OverflowButton setOverflowState={setOverflowState} overflow_state={overflow_state}></OverflowButton>
               <div className="leaves_img" id="leaves1">
                   <img src={leaves} className="leaves_src"></img>
               </div>
@@ -71,6 +82,24 @@ function App(){
               <div className="blackBox top"></div>
               <div className="whiteBox bottom"></div>
           </div>
+    </div>
+  );
+}
+
+function OverflowButton(props:{overflow_state:string,setOverflowState:Function}){
+
+  function overflowButtonClick(){
+    if(props.overflow_state===overflow_states.closed){
+      props.setOverflowState(overflow_states.open);
+    }
+    else if(props.overflow_state===overflow_states.open){
+      props.setOverflowState(overflow_states.closed);
+    }
+  }
+
+  return (
+    <div className="overflow" onClick={overflowButtonClick}>
+        <img src='/overflow_icon.png' className="overflow_icon"></img>
     </div>
   );
 }
