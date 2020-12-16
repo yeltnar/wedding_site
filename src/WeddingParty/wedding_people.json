@@ -88,9 +88,9 @@
         },
         {
             "name":"Danny Zamorano",
-            "img":"/weddingparty/white.png",
+            "img":"/weddingparty/Danny.jpg",
             "relation":"Drew's friend from UTD",
-            "hide":true
+            "hide":false
         }
     ]
 }
