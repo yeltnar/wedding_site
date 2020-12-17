@@ -117,7 +117,7 @@ function TopBar(props:{overflow_state:string}){
     const page = getCurrentPage();
 
     function handleClick(){
-      const s = cur.page_link===""?"/":`/#${cur.page_link}`;
+      const s = cur.page_link==="/"?"/":`/#${cur.page_link}`;
       window.location.href = s;
       setUnderlinedElement(cur.page_link); // do this last so the other parts can happen first
     }
@@ -165,7 +165,7 @@ function getCurrentPage(){
   const page = hash_page_regex_result===null?hash_page_regex_result:hash_page_regex_result[1];
 
   if(page===null){
-    return "";
+    return "/";
   }
   return page;
 }
