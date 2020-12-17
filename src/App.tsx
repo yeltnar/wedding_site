@@ -110,6 +110,8 @@ function OverflowButton(props:{overflow_state:string,setOverflowState:Function})
 
 function TopBar(props:{overflow_state:string}){
 
+  const [underlined_element,setUnderlinedElement] = useState(getCurrentPage());
+
   const top_bar_elements = top_bar_list.map((cur, i, arr)=>{
 
     const page = getCurrentPage();
@@ -117,6 +119,7 @@ function TopBar(props:{overflow_state:string}){
     function handleClick(){
       const s = cur.page_link===""?"/":`/#${cur.page_link}`;
       window.location.href = s;
+      setUnderlinedElement(cur.page_link); // do this last so the other parts can happen first
     }
 
     console.log({page});
@@ -126,8 +129,10 @@ function TopBar(props:{overflow_state:string}){
     } 
 
     const inline_style = {
-      textDecoration: page===cur.page_link?"underline":""
+      textDecoration: underlined_element===cur.page_link?"underline":""
     };
+
+    debugger
 
     return (<div onClick={handleClick} key={i} style={inline_style}>{cur.name}</div>);
   });
