@@ -7,6 +7,9 @@ import ComingSoon from "./ComingSoon/ComingSoon"
 // import CountDown from "./CountDown/CountDown"
 // import SaveTheDate from "./SaveTheDate/SaveTheDate"
 
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 import "./App.css"
 import isMobile from './mobilecheck.js'
 
@@ -29,10 +32,10 @@ const top_bar_list = [
     name:"Registry",
     page_link: "registry",
   },
-  // {
-  //   name:"Accommodations",
-  //   page_link: "accommodations",
-  // },
+  {
+    name:"Accommodations",
+    page_link: "accommodations",
+  },
   // {
   //   name:"COVID-19 Sux",
   //   page_link: "covid",
@@ -44,26 +47,27 @@ const overflow_states = {open:"open",closed:"closed"};
 function App(){
 
   const [overflow_state,setOverflowState] = useState(overflow_states.closed);
-  
-  const page = getCurrentPage();
-
-  let content;
-
-  if( page==="party" ){
-    content = (<WeddingParty></WeddingParty>);
-  }else if( page==="story" ){
-    content = (<ComingSoon></ComingSoon>);
-  }else if( page==="registry" ){
-    content = (<ComingSoon></ComingSoon>);
-  }else{
-    content = (<Home></Home>);
-  }
 
   const top_level_class = (()=>{
     const overflow_open = overflow_state;
     const is_mobile = isMobile()===true?"is_mobile":"is_desktop";
     return `${is_mobile} ${overflow_open}`;
   })()
+
+  function getPage(){
+    const page = getCurrentPage();
+    if( page==="party" ){
+      return (<WeddingParty></WeddingParty>);
+    }else if( page==="story" ){
+      return (<ComingSoon></ComingSoon>);
+    }else if( page==="registry" ){
+      return (<ComingSoon></ComingSoon>);
+    }else if( page==="accommodations" ){
+      return (<ComingSoon></ComingSoon>);
+    }else{
+      return (<Home></Home>);
+    }
+  }
 
   return (
     <div className={top_level_class}>
@@ -74,7 +78,7 @@ function App(){
               </div>
               <div className="centerContentWrapper">
                 <TopBar overflow_state={overflow_state}></TopBar>
-                {content}
+                <Router><Route path="/" render={getPage} /></Router>
               </div>
               <div className="leaves_img" id="leaves2">
                   <img src={leaves} className="leaves_src"></img>
@@ -111,7 +115,7 @@ function TopBar(props:{overflow_state:string}){
     const page = getCurrentPage();
 
     function handleClick(){
-      const s = cur.page_link===""?"/":`/?p=${cur.page_link}`;
+      const s = cur.page_link===""?"/":`/#${cur.page_link}`;
       window.location.href = s;
     }
 
@@ -152,9 +156,11 @@ function TopBar(props:{overflow_state:string}){
 }
 
 function getCurrentPage(){
-  let page = new URLSearchParams(window.location.search).get('p')
+  const hash_page_regex_result = /#([a-z]+)/.exec(window.location.href);
+  const page = hash_page_regex_result===null?hash_page_regex_result:hash_page_regex_result[1];
+
   if(page===null){
-    return ""
+    return "";
   }
   return page;
 }
