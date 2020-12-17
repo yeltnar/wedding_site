@@ -82,9 +82,9 @@
         },
         {
             "name":"Josh Chancellor",
-            "img":"/weddingparty/white.png",
+            "img":"/weddingparty/Josh.jpg",
             "relation":"Drew's cousin",
-            "hide":true
+            "hide":false
         },
         {
             "name":"Danny Zamorano",
