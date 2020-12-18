@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Home from "./Home/Home"
 import WeddingParty from "./WeddingParty/WeddingParty"
 import ComingSoon from "./ComingSoon/ComingSoon"
+import Covid from "./Covid/Covid"
 // import CountDown from "./CountDown/CountDown"
 // import SaveTheDate from "./SaveTheDate/SaveTheDate"
 
@@ -36,10 +37,10 @@ const top_bar_list = [
     name:"Accommodations",
     page_link: "accommodations",
   },
-  // {
-  //   name:"COVID-19 Sux",
-  //   page_link: "covid",
-  // }
+  {
+    name:"COVID-19 Sux",
+    page_link: "covid",
+  }
 ];
 
 const overflow_states = {open:"open",closed:"closed"};
@@ -64,6 +65,8 @@ function App(){
       return (<ComingSoon></ComingSoon>);
     }else if( page==="accommodations" ){
       return (<ComingSoon></ComingSoon>);
+    }else if( page==="covid" ){
+      return (<Covid></Covid>);
     }else{
       return (<Home></Home>);
     }
@@ -118,7 +121,8 @@ function TopBar(props:{overflow_state:string}){
 
     function handleClick(){
       const s = cur.page_link==="/"?"/":`/#${cur.page_link}`;
-      window.location.href = s;
+      // window.location.href = s;
+      window.location.replace(s);
       setUnderlinedElement(cur.page_link); // do this last so the other parts can happen first
     }
 
@@ -131,8 +135,6 @@ function TopBar(props:{overflow_state:string}){
     const inline_style = {
       textDecoration: underlined_element===cur.page_link?"underline":""
     };
-
-    debugger
 
     return (<div onClick={handleClick} key={i} style={inline_style}>{cur.name}</div>);
   });

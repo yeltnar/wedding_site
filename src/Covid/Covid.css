@@ -1,0 +1,9 @@
+.outer{
+    font-style: italic;
+    font-size: 3rem;
+    width: calc(100vw - 2*var(--black-box-padding));
+    text-shadow: 0px 0px 2px black;
+}
+.outer_content{
+    padding: 10rem;
+}
