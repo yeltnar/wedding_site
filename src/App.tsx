@@ -80,7 +80,7 @@ function App(){
                   <img src={leaves} className="leaves_src"></img>
               </div>
               <div className="centerContentWrapper">
-                <TopBar overflow_state={overflow_state}></TopBar>
+                <TopBar overflow_state={overflow_state} setOverflowState={setOverflowState}></TopBar>
                 <Router><Route path="/" render={getPage} /></Router>
               </div>
               <div className="leaves_img" id="leaves2">
@@ -111,7 +111,7 @@ function OverflowButton(props:{overflow_state:string,setOverflowState:Function})
   );
 }
 
-function TopBar(props:{overflow_state:string}){
+function TopBar(props:{overflow_state:string,setOverflowState:Function}){
 
   const [underlined_element,setUnderlinedElement] = useState(getCurrentPage());
 
@@ -123,6 +123,7 @@ function TopBar(props:{overflow_state:string}){
       const s = cur.page_link==="/"?"/":`/#${cur.page_link}`;
       // window.location.href = s;
       window.location.replace(s);
+      props.setOverflowState(overflow_states.closed);
       setUnderlinedElement(cur.page_link); // do this last so the other parts can happen first
     }
 
