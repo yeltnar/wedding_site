@@ -7,7 +7,7 @@ function Home(props: any) {
     return (
         <>
             <div className="centerContent home">
-                <div className="img_txt">Stay in McKinney, yo</div>
+                <div className="txt">Stay in McKinney, yo</div>
             </div>
         </>
     );

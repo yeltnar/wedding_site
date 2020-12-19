@@ -54,6 +54,7 @@
 .is_mobile .topbar_wrapper{
   padding: 1rem;
   background-color: black;
+  font-size: 2rem;
 }
 .is_desktop #topbar{
   position: fixed;
@@ -156,7 +157,7 @@
 }
 
 .img_txt{
-    font-size: 300%;
+    /* font-size: 300%; */
     /* margin: 2%; */
     font-weight: bold;
     text-align: center;

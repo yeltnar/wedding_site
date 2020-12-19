@@ -16,7 +16,7 @@ function Home(props: any) {
     return (
         <>
             <div className="centerContent home">
-                <div className="img_txt">November 20, 2021</div>
+                <div className="txt">November 20, 2021</div>
                 <div className="the_one_img"><img src={img} ></img></div>
                 <CountDown event_date={new Date(event_date_str)}></CountDown>
             </div>
