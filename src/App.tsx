@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-// import TheOne from "./TheOne/TheOne";
 import Home from "./Home/Home"
 import OurStory from "./OurStory/OurStory"
 import WeddingParty from "./WeddingParty/WeddingParty"
@@ -30,14 +29,14 @@ const top_bar_list = [
     name:"Wedding Party",
     page_link: "party",
   },
-  {
-    name:"Registry",
-    page_link: "registry",
-  },
-  {
-    name:"Accommodations",
-    page_link: "accommodations",
-  },
+  // {
+  //   name:"Registry",
+  //   page_link: "registry",
+  // },
+  // {
+  //   name:"Accommodations",
+  //   page_link: "accommodations",
+  // },
   {
     name:"COVID-19 Sux",
     page_link: "covid",
