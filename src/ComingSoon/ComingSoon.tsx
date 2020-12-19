@@ -1,8 +1,8 @@
 import React from 'react';
 
-import "./ComingSoon.css"
+import "./Registry.css"
 
-function ComingSoon(props:any){
+function Registry(props:any){
 
     return (
         <div className="coming_soon_outer" onClick={onClick}>
@@ -17,4 +17,4 @@ function ComingSoon(props:any){
     }
 }
 
-export default ComingSoon;
+export default Registry;

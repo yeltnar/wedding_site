@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-import Home from "./Home/Home"
-import OurStory from "./OurStory/OurStory"
-import WeddingParty from "./WeddingParty/WeddingParty"
-import ComingSoon from "./ComingSoon/ComingSoon"
-import Covid from "./Covid/Covid"
-// import CountDown from "./CountDown/CountDown"
-// import SaveTheDate from "./SaveTheDate/SaveTheDate"
+import Home from "./Home/Home";
+import OurStory from "./OurStory/OurStory";
+import WeddingParty from "./WeddingParty/WeddingParty";
+import Covid from "./Covid/Covid";
+import Accommodations from "./Accommodations/Accommodations";
+import Registry from "./Registry/Registry";
 
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -29,14 +28,14 @@ const top_bar_list = [
     name:"Wedding Party",
     page_link: "party",
   },
-  // {
-  //   name:"Registry",
-  //   page_link: "registry",
-  // },
-  // {
-  //   name:"Accommodations",
-  //   page_link: "accommodations",
-  // },
+  {
+    name:"Registry",
+    page_link: "registry",
+  },
+  {
+    name:"Accommodations",
+    page_link: "accommodations",
+  },
   {
     name:"COVID-19",
     page_link: "covid",
@@ -73,9 +72,9 @@ function App() {
     }else if( page==="story" ){
       return (<OurStory></OurStory>);
     }else if( page==="registry" ){
-      return (<ComingSoon></ComingSoon>);
+      return (<Registry></Registry>);
     }else if( page==="accommodations" ){
-      return (<ComingSoon></ComingSoon>);
+      return (<Accommodations></Accommodations>);
     }else if( page==="covid" ){
       return (<Covid></Covid>);
     }else{
