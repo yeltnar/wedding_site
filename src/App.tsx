@@ -38,7 +38,7 @@ const top_bar_list = [
   //   page_link: "accommodations",
   // },
   {
-    name:"COVID-19 Sux",
+    name:"COVID-19",
     page_link: "covid",
   }
 ];
