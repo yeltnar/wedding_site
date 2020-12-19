@@ -24,7 +24,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "rm -rf docs && yarn build && mv build docs && cp CNAME docs/",
-    "deploy_push": "yarn deploy && git add . && git commit -m 'quick deploy' && git push"
+    "deploy_push": "yarn deploy && git add . && git commit -m 'quick deploy' && git push",
+    "docker":"docker build -t wedding-site-dev -f dev.Dockerfile . && docker run -it -p 3000:3000 -v $(pwd):/app wedding-site-dev"
   },
   "eslintConfig": {
     "extends": "react-app"
