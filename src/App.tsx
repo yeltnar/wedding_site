@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // import TheOne from "./TheOne/TheOne";
 import Home from "./Home/Home"
+import OurStory from "./OurStory/OurStory"
 import WeddingParty from "./WeddingParty/WeddingParty"
 import ComingSoon from "./ComingSoon/ComingSoon"
 import Covid from "./Covid/Covid"
@@ -11,8 +12,8 @@ import Covid from "./Covid/Covid"
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import "./App.css"
-import isMobile from './mobilecheck.js'
+import "./App.css";
+import isMobile from './mobilecheck.js';
 
 import leaves from "./img/leaves and shit.png"
 
@@ -45,7 +46,18 @@ const top_bar_list = [
 
 const overflow_states = {open:"open",closed:"closed"};
 
-function App(){
+function App() {
+
+  useEffect(() => {
+
+    setCustomUnits();
+    window.addEventListener('resize', setCustomUnits);
+
+    function setCustomUnits() {
+      document.documentElement.style.setProperty('--cvh', `${window.innerHeight * 0.01}px`);
+      document.documentElement.style.setProperty('--cvw', `${window.innerWidth * 0.01}px`);
+    }
+  }, []);
 
   const [overflow_state,setOverflowState] = useState(overflow_states.closed);
 
@@ -60,7 +72,7 @@ function App(){
     if( page==="party" ){
       return (<WeddingParty></WeddingParty>);
     }else if( page==="story" ){
-      return (<ComingSoon></ComingSoon>);
+      return (<OurStory></OurStory>);
     }else if( page==="registry" ){
       return (<ComingSoon></ComingSoon>);
     }else if( page==="accommodations" ){

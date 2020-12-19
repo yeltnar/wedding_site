@@ -1,0 +1,19 @@
+.our_story_outer{
+    font-style: italic;
+    font-size: 3rem;
+}
+
+.home_outer  .centerContent .the_one_img {
+    justify-self: center;
+    align-self: center;
+    /* height: calc(60 * var(--cvh)); */
+}
+
+.the_one_img > img{
+    max-height: 100%;
+    /* max-height: min(100%, 30rem); */
+    max-width: 100%;
+
+    justify-self: center;
+    align-self: center;
+}
