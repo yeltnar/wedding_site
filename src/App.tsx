@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-// import TheOne from "./TheOne/TheOne";
-import Home from "./Home/Home"
-import WeddingParty from "./WeddingParty/WeddingParty"
-import ComingSoon from "./ComingSoon/ComingSoon"
-// import CountDown from "./CountDown/CountDown"
-// import SaveTheDate from "./SaveTheDate/SaveTheDate"
+import Home from "./Home/Home";
+import OurStory from "./OurStory/OurStory";
+import WeddingParty from "./WeddingParty/WeddingParty";
+import Covid from "./Covid/Covid";
+import Accommodations from "./Accommodations/Accommodations";
+import Registry from "./Registry/Registry";
 
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import "./App.css"
-import isMobile from './mobilecheck.js'
+import "./App.css";
+import isMobile from './mobilecheck.js';
 
 import leaves from "./img/leaves and shit.png"
 
@@ -36,15 +36,26 @@ const top_bar_list = [
     name:"Accommodations",
     page_link: "accommodations",
   },
-  // {
-  //   name:"COVID-19 Sux",
-  //   page_link: "covid",
-  // }
+  {
+    name:"COVID-19",
+    page_link: "covid",
+  }
 ];
 
 const overflow_states = {open:"open",closed:"closed"};
 
-function App(){
+function App() {
+
+  useEffect(() => {
+
+    setCustomUnits();
+    window.addEventListener('resize', setCustomUnits);
+
+    function setCustomUnits() {
+      document.documentElement.style.setProperty('--cvh', `${window.innerHeight * 0.01}px`);
+      document.documentElement.style.setProperty('--cvw', `${window.innerWidth * 0.01}px`);
+    }
+  }, []);
 
   const [overflow_state,setOverflowState] = useState(overflow_states.closed);
 
@@ -59,11 +70,13 @@ function App(){
     if( page==="party" ){
       return (<WeddingParty></WeddingParty>);
     }else if( page==="story" ){
-      return (<ComingSoon></ComingSoon>);
+      return (<OurStory></OurStory>);
     }else if( page==="registry" ){
-      return (<ComingSoon></ComingSoon>);
+      return (<Registry></Registry>);
     }else if( page==="accommodations" ){
-      return (<ComingSoon></ComingSoon>);
+      return (<Accommodations></Accommodations>);
+    }else if( page==="covid" ){
+      return (<Covid></Covid>);
     }else{
       return (<Home></Home>);
     }
@@ -77,7 +90,7 @@ function App(){
                   <img src={leaves} className="leaves_src"></img>
               </div>
               <div className="centerContentWrapper">
-                <TopBar overflow_state={overflow_state}></TopBar>
+                <TopBar overflow_state={overflow_state} setOverflowState={setOverflowState}></TopBar>
                 <Router><Route path="/" render={getPage} /></Router>
               </div>
               <div className="leaves_img" id="leaves2">
@@ -108,7 +121,7 @@ function OverflowButton(props:{overflow_state:string,setOverflowState:Function})
   );
 }
 
-function TopBar(props:{overflow_state:string}){
+function TopBar(props:{overflow_state:string,setOverflowState:Function}){
 
   const [underlined_element,setUnderlinedElement] = useState(getCurrentPage());
 
@@ -118,7 +131,9 @@ function TopBar(props:{overflow_state:string}){
 
     function handleClick(){
       const s = cur.page_link==="/"?"/":`/#${cur.page_link}`;
-      window.location.href = s;
+      // window.location.href = s;
+      window.location.replace(s);
+      props.setOverflowState(overflow_states.closed);
       setUnderlinedElement(cur.page_link); // do this last so the other parts can happen first
     }
 
@@ -131,8 +146,6 @@ function TopBar(props:{overflow_state:string}){
     const inline_style = {
       textDecoration: underlined_element===cur.page_link?"underline":""
     };
-
-    debugger
 
     return (<div onClick={handleClick} key={i} style={inline_style}>{cur.name}</div>);
   });

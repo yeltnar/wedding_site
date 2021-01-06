@@ -1,0 +1,17 @@
+.covid.outer{
+    font-style: italic;
+    font-size: 2rem;
+    width: calc(100vw - 2*var(--black-box-padding));
+    text-shadow: 0px 0px 2px black;
+    display: flex;
+    justify-content: center;;
+}
+.covid .outer_content{
+    /* padding: 10rem; */
+    max-width: min(80vw, 1400px);
+    text-align: center;
+}
+
+.covid .outer_content > *{
+    padding: 2rem;;
+}
