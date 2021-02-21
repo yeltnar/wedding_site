@@ -1,13 +1,18 @@
 
 @font-face {
-    font-family: zefont;
-    src: url(/Market_Deco.ttf);
+    font-family: fancyFont;
+    src: url(/LaBelle.woff2);
+}
+
+@font-face {
+    font-family: plainFont;
+    src: url(/Timeless.tff);
 }
 
 * {
   margin:0px;
   padding:0px;
-  font-family: zefont;
+  font-family: plainFont;
 }
 
 .image_holder{

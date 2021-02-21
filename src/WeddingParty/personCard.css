@@ -14,9 +14,13 @@
 .personCard .person_name{
     /* height:3rem; */
     text-shadow: 0px 0px 2px black;
+    background-color: black;
+    text-align: center;
+    font-family: fancyFont;
 }
 
 .personCard .person_relation{
     /* height:5rem; */
     text-shadow: 0px 0px 2px black;
+    text-align: center;
 }

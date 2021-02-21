@@ -1,13 +1,11 @@
 *{
     padding: 0rem;
     margin: 0rem; 
-
-    font-style: italic;
     /* font-size: 32px; */
 }
 
 .home .txt{
-    
+    font-family: fancyFont !important;
 }
 
 .home_outer{

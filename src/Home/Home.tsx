@@ -4,7 +4,8 @@ import "./Home.css"
 // import img from "../../public/weddingparty/Drulie.jpg"; 
 const img = '/weddingparty/Drulie.jpg';
 
-const event_date_str = "November 20, 2021 16:00";
+const event_date_str = "November 20, 2021";
+const event_date_str_time = "16:00";
 
 const MS_IN_SEC = 1000;
 const MS_IN_MIN = MS_IN_SEC*60;
@@ -16,9 +17,10 @@ function Home(props: any) {
     return (
         <>
             <div className="centerContent home">
-                <div className="txt">November 20, 2021</div>
+                <div className="txt">Julie + Drew</div>
+                <div className="txt">{event_date_str}</div>
                 <div className="the_one_img"><img src={img} ></img></div>
-                <CountDown event_date={new Date(event_date_str)}></CountDown>
+                <CountDown event_date={new Date(`${event_date_str} ${event_date_str_time}`)}></CountDown>
             </div>
         </>
     );
