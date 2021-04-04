@@ -1,4 +1,14 @@
 .txt{
     text-align: center;
     font-size: 3rem;
+    font-family: fancyFont !important;
+}
+
+.txt > a{
+    color:#999c8b;
+    font-family: fancyFont !important;
+}
+
+.txt > a:visited{
+    color:#999c8b
 }
