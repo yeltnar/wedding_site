@@ -8,8 +8,16 @@ function Home(props: any) {
 
     return (
         <>
-            <div className="centerContent home">
-                <div className="txt">Make a reservation at <a href={hotel_link}>Hampton Inn &amp Suites McKinney</a></div>
+            <div className="centerContent accommodations">
+                <div className="txt">
+                    <div>For your convenience, a block of rooms has been reserved. Use the link below to make your reservation!</div>
+                    <br/>
+                    <div><a href={hotel_link}>Hampton Inn & Suites McKinney</a></div>
+                    {/* <br/> */}
+                    <div>2008 N Central Expy, McKinney, TX 75069</div>
+                    {/* <br/> */}
+                    <div>+1 972-542-6622</div>
+                </div>
             </div>
         </>
     );

@@ -1,14 +1,18 @@
-.txt{
+.accommodations .txt{
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: fancyFont !important;
 }
 
-.txt > a{
+.accommodations .txt *{
+    font-family: fancyFont !important;
+}
+
+.accommodations .txt > a{
     color:#999c8b;
     font-family: fancyFont !important;
 }
 
-.txt > a:visited{
+.accommodations .txt > a:visited{
     color:#999c8b
 }

@@ -1,4 +1,9 @@
-.txt{
+.registry .txt{
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
+    font-family: fancyFont im !important;
+}
+
+.registry .txt > * {    
+    font-family: fancyFont !important;
 }
