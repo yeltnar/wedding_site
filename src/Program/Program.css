@@ -1,5 +1,6 @@
-.WeddingParty{
+.Program{
     position: fixed;
+    font-size: 2rem;
 
     --top: calc( 40vw * (1611/2363) * (864/1611) + 5vh );
     top: var(--top);
@@ -24,16 +25,36 @@
     background: transparent; /* make scrollbar transparent */
 }
 
-.WeddingPartyWrapper{
+.ProgramWrapper{
     /* padding: 1rem; */
-    width: 100%;
+    /* width: 100%; */
     display:flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-bottom: 4rem;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-evenly; */
+    /* margin-bottom: 4rem; */
     max-width: 1400px;
+    max-width: 60%;
+    align-items: center;
 }
 
-.WeddingPartyWrapper > *{
+.ProgramWrapper > *{
     padding: .5rem;
+}
+
+.Program .event{
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Program .event .icon{
+    height: 5rem;
+}
+
+.Program .event .extra_text{
+    font-size: 1rem;
+    font-style: italic;
+    /* padding: .5rem; */
 }

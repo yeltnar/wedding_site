@@ -6,6 +6,7 @@ import WeddingParty from "./WeddingParty/WeddingParty";
 import Covid from "./Covid/Covid";
 import Accommodations from "./Accommodations/Accommodations";
 import Registry from "./Registry/Registry";
+import Program from "./Program/Program"
 
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -25,6 +26,10 @@ const top_bar_list = [
     page_link: "story",
   },
   {
+    name:"Program",
+    page_link: "program",
+  },
+  {
     name:"Wedding Party",
     page_link: "party",
   },
@@ -39,7 +44,7 @@ const top_bar_list = [
   {
     name:"COVID-19",
     page_link: "covid",
-  }
+  },
 ];
 
 const overflow_states = {open:"open",closed:"closed"};
@@ -77,6 +82,8 @@ function App() {
       return (<Accommodations></Accommodations>);
     }else if( page==="covid" ){
       return (<Covid></Covid>);
+    }else if( page==="program" ){
+      return (<Program></Program>);
     }else{
       return (<Home></Home>);
     }
