@@ -41,7 +41,7 @@ function Program(props:any){
             time:"10:00p",
             title:"Exit",
             icon:"/icons/JUST MARRIED.svg",
-            extra:"Please note, Uber and Lyft will not be able to pick you up from Bethel Rock. Please be sure to arrange your transportation to and from the venue prior to the event."
+            extra:"Please note, Uber and Lyft will not be able to pick up guests from Bethel Rock. Please be sure to arrange transportation to and from the venue prior to the event."
         },
     ]
 
