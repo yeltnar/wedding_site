@@ -40,6 +40,7 @@
 
 .ProgramWrapper > *{
     padding: .5rem;
+    padding-bottom: 1.5rem;
 }
 
 .Program .event{
@@ -49,7 +50,11 @@
     align-items: center;
 }
 
-.Program .event .icon{
+.Program .page_title{
+    font-size: 3rem;
+}
+
+.Program .icon{
     height: 5rem;
 }
 

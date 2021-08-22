@@ -66,11 +66,19 @@ function Program(props:any){
     return (
         <div className="Program" onClick={onClick}>
             <div className="ProgramWrapper">
-                <div className="title">
-                    Saturday, November 20, 2021<br/>
-                    Bethel Rock<br/>
-                    Leonard, TX<br/>
+                <div className="fancyFont page_title">Wedding Day Details</div>
+                <div>―</div>
+                <div>
+                    <span className="fancyFont">Saturday, November 20, 2021</span>
+                    <div>
+                        <span>Bethel Rock Wedding Venue</span><br/>
+                        5262 FM896, Leonard, TX 75452<br/>
+                    </div>
+                    <img className="icon" src="/icons/WEDDING LOCATION.svg"/><br/>
                 </div>
+                ―
+                {/* <div>―</div> */}
+                <div><span className="fancyFont">Timeline</span></div>
                 {events_eles}
             </div>
         </div>

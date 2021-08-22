@@ -9,6 +9,10 @@
     src: url(/Timeless.tff);
 }
 
+.fancyFont{
+  font-family: fancyFont !important;
+}
+
 * {
   margin:0px;
   padding:0px;

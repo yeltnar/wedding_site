@@ -26,7 +26,7 @@ const top_bar_list = [
     page_link: "story",
   },
   {
-    name:"Program",
+    name:"Details",
     page_link: "program",
   },
   {
