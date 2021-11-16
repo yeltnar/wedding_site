@@ -1,16 +1,5 @@
-FROM node:14
+FROM caddy:latest
 
-WORKDIR /app
+COPY docs /usr/share/caddy
 
-COPY package.json ./
-COPY yarn.lock ./
-
-RUN yarn install
-
-COPY ./ ./
-
-RUN yarn build 
-
-EXPOSE 3000
-
-CMD npx serve -p 3000 build
+EXPOSE 80
