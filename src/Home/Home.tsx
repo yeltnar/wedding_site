@@ -5,7 +5,7 @@ import "./Home.css"
 const img = '/weddingparty/Drulie.jpg';
 
 const event_date_str = "November 20, 2021";
-const event_date_str_time = "16:00";
+const event_date_str_time = "16:30";
 
 const MS_IN_SEC = 1000;
 const MS_IN_MIN = MS_IN_SEC*60;
