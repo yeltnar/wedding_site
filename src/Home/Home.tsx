@@ -66,7 +66,9 @@ function CountDown(props:{event_date:Date}){
     const hrs_txt = days===1?'hr':"hrs" ;
     const min_txt = days===1?'min':"mins" ;
 
-    const time_until_str = `${days} ${day_txt} ${hrs} ${hrs_txt} ${min} ${min_txt}`;
+    const days_ago = diff>0 ? "" : " ago";
+
+    const time_until_str = `${Math.abs(days)} ${day_txt} ${Math.abs(hrs)} ${hrs_txt} ${Math.abs(min)} ${min_txt}${days_ago}`;
 
     return (<div className={'countdown'} >{time_until_str}</div>);
 }
