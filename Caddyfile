@@ -5,13 +5,8 @@
   }
 }
 
-https://nixos-testing.lan:3000, 
-127.0.0.1:3000, 
-https://127.0.0.1:3000, 
-https://192.168.2.180:3000, 
-https://nixos-testing.lan, 
-https://nixos-testing.lan:443 
-{
+# i guess we need the dns entry, and the proxied port 
+https://nixos-testing.lan:3000, https://nixos-testing.lan {
   
   tls internal
 
