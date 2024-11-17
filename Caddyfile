@@ -13,7 +13,14 @@ https://nixos-testing.lan:3000, https://nixos-testing.lan {
 	log {
 		level debug
 	}
-	templates
-	header Content-Type text/plain
-	respond "{{.RemoteIP}}"
+
+  # Set this path to your site's directory.
+  root * /usr/share/caddy
+
+  # Enable the static file server.
+  file_server
+
+	# templates
+	# header Content-Type text/plain
+  # respond "{{.RemoteIP}}"
 }
