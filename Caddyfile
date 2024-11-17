@@ -1,13 +1,26 @@
-:3000 {
-        # Set this path to your site's directory.
-        root * /usr/share/caddy
+{
+  debug
+  log {
+    level debug
+  }
+}
 
-        # Enable the static file server.
-        file_server
+# i guess we need the dns entry, and the proxied port 
+https://nixos-testing.lan:3000, https://nixos-testing.lan {
+  
+  tls internal
 
-        # Another common task is to set up a reverse proxy:
-        # reverse_proxy localhost:8080
+	log {
+		level debug
+	}
 
-        # Or serve a PHP site through php-fpm:
-        # php_fastcgi localhost:9000
+  # Set this path to your site's directory.
+  root * /usr/share/caddy
+
+  # Enable the static file server.
+  file_server
+
+	# templates
+	# header Content-Type text/plain
+  # respond "{{.RemoteIP}}"
 }
