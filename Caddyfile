@@ -6,6 +6,8 @@
 }
 
 # i guess we need the dns entry, and the proxied port 
+https://drew-lin-desktop.lan:3000, https://drew-lin-desktop.lan,
+https://drew-lin-laptop.lan:3000, https://drew-lin-laptop.lan,
 https://nixos-testing.lan:3000, https://nixos-testing.lan {
   
   tls internal
